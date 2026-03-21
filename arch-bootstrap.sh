@@ -223,7 +223,7 @@ check_laptop() { \
 		            ;;
 		    esac
 		done
-		
+
 	fi
 	if [ -n "$laptopcomponents" ]; then
 		tput setaf 2; printf "Installing laptop components.\n"; tput sgr0
@@ -287,7 +287,7 @@ install_software() { \
 	compositor="xcompmgr"
 	taskmanager="htop"
 	audiomixer="pulsemixer pavucontrol"
-	filemanager="ranger ueberzug dragon-drop" # AUR
+	filemanager="ranger ueberzugpp dragon-drop" # AUR
 	mediaplayer="mpv"
 	videoconverter="handbrake"
 	musicplayer="mpd ncmpcpp mpc"
@@ -295,7 +295,7 @@ install_software() { \
 	imageeditor="gimp inkscape"
 	webcammanager="guvcview"
 	displaysettings="xorg-xrandr arandr"
-	nightlight="sct" # AUR
+	nightlight="xsct" # AUR
 	printscreen="maim"
 	ssh="openssh"
 	pdfviewer="zathura zathura-pdf-poppler"
@@ -308,7 +308,7 @@ install_software() { \
 	fstools="dosfstools mtools simple-mtpfs ntfs-3g" # AUR
 	compressiontools="rar zip unzip p7zip bzip2 gzip xz"
 	java="liberica-jdk-8-full-bin" # AUR
-	
+
 	software="
 	    $shell
 	    $terminal
@@ -360,7 +360,7 @@ install_software() { \
 	tput setaf 2; printf "Installing dwm.\n"; tput sgr0
 	git clone https://github.com/demo2k20/dwm.git $SOURCEDIR/dwm
 	cd $SOURCEDIR/dwm && sudo make clean install && cd
-	
+
 	# Install my dwmblocks build
 	tput setaf 2; printf "Installing dwmblocks.\n"; tput sgr0
 	git clone https://github.com/demo2k20/dwmblocks.git $SOURCEDIR/dwmblocks
